@@ -113,10 +113,6 @@ I signed in as `alice-dev` and tried three things.
 
 <a href="11-alice-create-bucket-denied.png"><img src="11-alice-create-bucket-denied.png" alt="Alice denied when creating a bucket" width="600"></a>
 
-## Things I noticed
-
-- **No MFA.** On Alice's user page, AWS shows "Console access: Enabled without MFA". For a test lab that's fine, but in a real company I would require MFA for every user who can sign in to the console, because a leaked password alone would be enough to get in.
-- **The console needed an extra statement.** Without `ListAllMyBuckets`, a user can't see the list of buckets in the S3 console, even if they have access to one of them. That's why the first statement is in the policy.
 
 ## What I learned
 
